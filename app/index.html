@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<base href="/" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+
+  <script src="./bower_components/webcomponentsjs/webcomponents.js"></script>
+  <link rel="import" href="../bower_components/polymer/polymer.html">
+  <link rel="import" href="./components/all_elements.html" />
+
+	<link rel="stylesheet" href="app.css" />
+
+  <style>
+    paper-input /deep/ .focused-underline, paper-input /deep/ .cursor, paper-input-decorator /deep/ .focused-underline, paper-input-decorator /deep/ .cursor {
+      background-color: #16a085;
+    }
+
+  </style>
+</head>
+
+<body ng-app="app" fullbleed vertical layout>
+
+
+<core-drawer-panel>
+  <div drawer class="drawer">
+    <core-menu selected="0">
+      <core-item icon="settings" label="Settings"></core-item>
+      <core-item icon="dialog" label="Dialog"></core-item>
+      <core-item icon="search" label="Search"></core-item>
+    </core-menu>
+  </div>
+  <div main>
+
+    <core-header-panel mode="standard" flex vertical layout>
+      <core-toolbar>
+
+        <paper-icon-button id="navicon"
+                           icon="menu" core-drawer-toggle></paper-icon-button>
+        <span flex class="title">DesGTD</span>
+        <paper-icon-button id="searchbutton"
+                           icon="search"></paper-icon-button>
+      </core-toolbar>
+      <div class="separate-header"></div>
+      <div class="content" flex>
+        <ng-view></ng-view>
+      </div>
+    </core-header-panel>
+
+  </div>
+</core-drawer-panel>
+
+
+
+
+
+	<script src="vendor.js"></script>
+	<script src="app.js"></script>
+
+  <!-- @if isDev==true -->
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+  <!-- @endif -->
+</body>
+</html>

@@ -1,0 +1,69 @@
+
+$primary-color: #16a085;
+$dark-color: #34495e;
+$light-color: #ecf0f1;
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: $light-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.title {
+  text-transform: lowercase;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.drawer {
+  background-color: $dark-color;
+
+  core-item {
+    color: $light-color;
+    fill: $light-color;
+  }
+}
+
+core-header-panel {
+}
+core-toolbar {
+  background-color: $primary-color;
+  color: $light-color;
+  paper-icon-button {
+    color: $light-color;
+  }
+}
+
+.separate-header {
+  border-bottom: 1.25rem solid $dark-color;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.todo {
+  paper-input {
+  }
+
+  paper-checkbox {
+    margin-right: 1rem;
+  }
+
+  .more-tasks-button {
+    margin-left: 0;
+  }
+}
+
+paper-button {
+  margin-top: 1rem;
+  background: $primary-color;
+  color: white;
+}
