@@ -1,0 +1,42 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #ecf0f1; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300; }
+
+.content {
+  padding: 1rem; }
+
+.title {
+  text-transform: lowercase;
+  font-size: 2rem;
+  font-weight: 300; }
+
+.drawer {
+  background-color: #34495e; }
+  .drawer core-item {
+    color: #ecf0f1;
+    fill: #ecf0f1; }
+
+core-toolbar {
+  background-color: #16a085;
+  color: #ecf0f1; }
+  core-toolbar paper-icon-button {
+    color: #ecf0f1; }
+
+.separate-header {
+  border-bottom: 1.25rem solid #34495e; }
+
+.content {
+  padding: 1rem; }
+
+.todo paper-checkbox {
+  margin-right: 1rem; }
+.todo .more-tasks-button {
+  margin-left: 0; }
+
+paper-button {
+  margin-top: 1rem;
+  background: #16a085;
+  color: white; }
