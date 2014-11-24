@@ -40,3 +40,7 @@ paper-button {
   margin-top: 1rem;
   background: #16a085;
   color: white; }
+
+a {
+  color: #ecf0f1;
+  text-decoration: none; }
