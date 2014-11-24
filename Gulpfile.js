@@ -9,7 +9,7 @@ var sass = require('gulp-sass');
 var runSequence = require('run-sequence');
 
 var build_options = {
-	'isDev': true
+	'isDev': process.env.NODE_ENV != 'production'
 };
 
 var external_libraries = [
@@ -130,16 +130,17 @@ gulp.task('watch', function() {
   watch('./app/components/**/*', 'move:components');
 });
 
+gulp.task('production', function(cb) {
+  build_options.isDev = false;
+  runSequence('default', cb);
+});
+
 gulp.task('default', function(cb) {
-	build_options.isDev = process.env.NODE_ENV != 'production';
 	console.log("running in " + (build_options.isDev ? 'development mode' : 'production mode'));
   if (build_options.isDev) {
-    build_options.isDev = true;
     runSequence('main', 'watch', 'serve', cb);
   }
   else {
-    build_options.isDev = false;
     runSequence('main', cb);
   }
 });
-

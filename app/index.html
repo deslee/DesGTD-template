@@ -23,7 +23,7 @@
 <body ng-app="app" fullbleed vertical layout>
 
 
-<core-drawer-panel>
+<core-drawer-panel fullbleed vertical layout>
   <div drawer class="drawer">
     <core-menu selected="0">
       <core-item icon="settings" label="Settings"></core-item>
@@ -31,11 +31,10 @@
       <core-item icon="search" label="Search"></core-item>
     </core-menu>
   </div>
-  <div main>
+  <div main fullbleed vertical layout>
 
-    <core-header-panel mode="standard" flex vertical layout>
+    <core-scroll-header-panel flex mode="standard">
       <core-toolbar>
-
         <paper-icon-button id="navicon"
                            icon="menu" core-drawer-toggle></paper-icon-button>
         <span flex class="title">DesGTD</span>
@@ -43,10 +42,10 @@
                            icon="search"></paper-icon-button>
       </core-toolbar>
       <div class="separate-header"></div>
-      <div class="content" flex>
+      <div class="content">
         <ng-view></ng-view>
       </div>
-    </core-header-panel>
+    </core-scroll-header-panel>
 
   </div>
 </core-drawer-panel>
